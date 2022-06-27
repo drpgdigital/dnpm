@@ -1,0 +1,22 @@
+version: '3'
+
+networks:
+  domains:
+    external: true
+
+services:
+  app:
+    build: .
+    container_name: nginx-proxy
+    restart: unless-stopped
+    ports:
+      - '80:80'
+      - '81:81'
+      - '443:443'
+      - '2020:22'
+    volumes:
+      - ./data:/data
+      - ./letsencrypt:/etc/letsencrypt
+      - /var/run/docker.sock:/tmp/docker.sock:ro
+    networks:
+      - domains

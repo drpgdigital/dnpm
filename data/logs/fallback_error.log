@@ -1,0 +1,1 @@
+2022/06/27 10:32:24 [error] 289#289: *3 connect() failed (111: Connection refused) while connecting to upstream, client: 172.29.0.1, server: nginxproxymanager, request: "GET /api/ HTTP/1.1", upstream: "http://127.0.0.1:3000/", host: "localhost:81", referrer: "http://localhost:81/"
